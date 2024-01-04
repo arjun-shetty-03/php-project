@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- #FFC -->
+    <!-- 76CDD7 -->
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+    <script>
+
+        function validate(){
+            var mailFormat= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            var email = document.getElementById("name"); 
+        var pass = document.getElementById("password"); 
+
+        if(email.value == ""){
+            alert("Enter the email ID");
+        }
+        if(pass.value==""){
+            alert("Enter the Password");
+        }
+        // if(!(pass.value.match(mailFormat))){
+        //     alert("Wrong email format.");
+        // }
+        }
+
+    </script>
+
+    <div class="full-page">
+        <div class="navbar">
+                <h2 style="color:  #40c057; font-family: 'Homemade Apple', cursive;  margin-left: 10px; margin-top: 20px; font-size: 50px;">spicelane</h2>
+                <nav>
+          <ul id='MenuItems'>
+            <li><a href="index.html">Home</a></li>
+            <li><a href='menu.html'>Menu</a></li>
+            <li><a href='reservation.html'>Table Booking</a></li>
+            <li><a href="cart.php">Orders</a></li>
+            <li><a href='login.html'>Login</a></li>
+            <li><a href="logout.php">Logout</a></li>
+          </ul>
+        </nav>
+            </nav>
+        </div>
+            
+            <br><br>
+            <center>
+                <h3 style="color:#ebfbee; margin-bottom: 20px;">Welcome Back</h3>
+        <div class="div1">
+            <form onsubmit="validate()" action="login.php" method="post">
+                  <div class="form-floating">
+                    Email ID
+                    <input type="email" name="email" class="form-control" id="name" placeholder=" Email ID" required>
+                  </div>
+                  <div class="form-floating">
+                    Password
+                    <input type="password" name="password" class="form-control" id="password" placeholder=" Password" required>
+                  </div>
+                  <button onclick="validate()" class="btn">Next</button>
+                  <br><br>
+                  <a style="color: #ebfbee; font-size: small; text-decoration: none;" href="admin.html">Admin? Click Here</a><br>
+                  <a style="color: #40c057; text-decoration: none;" href="registration4.php">Not Registered? Sign Up Now!</a><br><br>
+            <br>
+            </form>
+        </div>
+        </center>
+        </div>
+    </div>
+
+
+    <style>
+        ::placeholder{
+            color: #000000;
+        }
+
+        .btn{
+            color: aliceblue;
+            background-color: #37b24d;
+            padding: 5px;
+            margin-top: 2rem;
+            width: 100px;
+        }
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         
+        .form-floating {
+            width: 300px;
+            height: 30px;
+            margin: 50px;
+            /* color: rgb(201, 232, 232); */
+            /* color: #000000; */
+        }
+        
+
+        .div1{
+            border: #ebfbee solid 0.5px;
+            width: fit-content;
+            border-radius: 10px;
+            /* margin: 1rem; */
+            color: rgb(255, 255, 255);
+        }
+
+        .full-page
+        {
+            font-family: 'Rubik', sans-serif;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.837),rgba(0, 0, 0, 0.7)),url('https://media.architecturaldigest.com/photos/572a34ffe50e09d42bdfb5e0/master/pass/japanese-restaurants-la-01.jpg');
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.756),rgba(0, 0, 0, 0.756)),url('https://photos.mandarinoriental.com/is/image/MandarinOriental/new-york-2020-fine-dining-lounge?wid=1560&hei=820&fmt=jpeg&qlt=75,0&op_sharpen=0&resMode=sharp2&op_usm=0.8,0.8,4,0&iccEmbed=0&printRes=72&fit=crop&qlt=45,0'); */
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+        }
+        .navbar
+        {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            padding-left: 50px;
+            padding-right: 30px;
+            padding-top: 25px;
+        }
+        nav
+        {
+            flex: 1;
+            text-align: right;
+        }
+        nav ul 
+        {
+            display: inline-block;
+            list-style: none;
+        }
+        nav ul li
+        {
+            display: inline-block;
+            margin-right: 70px;
+        }
+        nav ul li a
+        {
+            text-decoration: none;
+            font-size: 20px;
+            font-family: sans-serif;
+            /* color: rgba(230, 222, 222, 0.77); */
+            color: #ebfbee;
+        }
+        
+
+    </style>
+    
+</body>
+</html>
